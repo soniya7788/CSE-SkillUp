@@ -39,6 +39,11 @@
     .questions-box p {
       margin-bottom: 0.3rem;
     }
+    .rating-confirm {
+      font-size: 0.8rem;
+      color: #4ade80;
+      margin-top: 0.3rem;
+    }
   </style>
 </head>
 <body>
@@ -47,10 +52,13 @@
     <p class="text-center text-lg text-gray-300 mb-6">By CSE Gyaan Gurus</p>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
       <!-- Course 1 -->
       <div class="bg-gray-800 p-4 rounded-xl shadow-lg course-card">
         <img src="https://www.webfries.com/wp-content/uploads/2020/06/static-vs-dynamic-website.jpg" alt="Static to Dynamic" class="rounded-lg h-48 w-full object-cover mb-4">
         <h2 class="text-xl font-semibold mb-1">From Static to Dynamic</h2>
+        <div class="mt-2 text-sm text-green-300 font-semibold">Price: <span class="line-through text-red-400">₹500</span> ₹200 only</div>
+        <p class="text-sm text-yellow-400 mb-2">⭐⭐⭐⭐☆ Rated 4.6+ by students</p>
         <p class="text-sm text-gray-400 mb-2">Instructor: Team CSE</p>
         <details>
           <summary>Syllabus</summary>
@@ -72,10 +80,11 @@
             <span onclick="rateStar(this)">&#9733;</span>
             <span onclick="rateStar(this)">&#9733;</span>
             <span onclick="rateStar(this)">&#9733;</span>
+            <div class="rating-confirm hidden">Thanks for rating! ⭐</div>
           </div>
         </div>
         <div class="mt-6">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLScRIA3QemqJBGST7KAbsJQyjVxJ1kfyb7XfVA2bZPuvgm-n7Q/viewform?usp=header" target="_blank" class="block text-center bg-yellow-500 hover:bg-yellow-400 text-black font-bold text-lg px-4 py-2 rounded-full transition">Register Now</a>
+          <button onclick="registerCourse(this, 'course1')" class="register-btn block w-full text-center bg-yellow-500 hover:bg-yellow-400 text-black font-bold text-lg px-4 py-2 rounded-full transition">Register Now</button>
         </div>
       </div>
 
@@ -83,6 +92,8 @@
       <div class="bg-gray-800 p-4 rounded-xl shadow-lg course-card">
         <img src="https://staticlearn.shine.com/l/m/images/blog/mobile/cv_template.webp" alt="Resume & Portfolio" class="rounded-lg h-48 w-full object-cover mb-4">
         <h2 class="text-xl font-semibold mb-1">Resume & Portfolio Building</h2>
+        <div class="mt-2 text-sm text-green-300 font-semibold">Price: <span class="line-through text-red-400">₹500</span> ₹200 only</div>
+        <p class="text-sm text-yellow-400 mb-2">⭐⭐⭐⭐☆ Rated 4.7+ by students</p>
         <p class="text-sm text-gray-400 mb-2">Instructor: Team CSE</p>
         <details>
           <summary>Syllabus</summary>
@@ -104,10 +115,11 @@
             <span onclick="rateStar(this)">&#9733;</span>
             <span onclick="rateStar(this)">&#9733;</span>
             <span onclick="rateStar(this)">&#9733;</span>
+            <div class="rating-confirm hidden">Thanks for rating! ⭐</div>
           </div>
         </div>
         <div class="mt-6">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLScRIA3QemqJBGST7KAbsJQyjVxJ1kfyb7XfVA2bZPuvgm-n7Q/viewform?usp=header" target="_blank" class="block text-center bg-yellow-500 hover:bg-yellow-400 text-black font-bold text-lg px-4 py-2 rounded-full transition">Register Now</a>
+          <button onclick="registerCourse(this, 'course2')" class="register-btn block w-full text-center bg-yellow-500 hover:bg-yellow-400 text-black font-bold text-lg px-4 py-2 rounded-full transition">Register Now</button>
         </div>
       </div>
 
@@ -115,6 +127,8 @@
       <div class="bg-gray-800 p-4 rounded-xl shadow-lg course-card">
         <img src="https://it.uic.edu/wp-content/uploads/sites/360/2021/01/LinkedIn-news.jpg" alt="Digital Social Life" class="rounded-lg h-48 w-full object-cover mb-4">
         <h2 class="text-xl font-semibold mb-1">Build Your Digital Social Life</h2>
+        <div class="mt-2 text-sm text-green-300 font-semibold">Price: <span class="line-through text-red-400">₹500</span> ₹200 only</div>
+        <p class="text-sm text-yellow-400 mb-2">⭐⭐⭐⭐☆ Rated 4.8+ by students</p>
         <p class="text-sm text-gray-400 mb-2">Instructor: Team CSE</p>
         <details>
           <summary>Syllabus</summary>
@@ -132,23 +146,24 @@
             <span onclick="rateStar(this)">&#9733;</span>
             <span onclick="rateStar(this)">&#9733;</span>
             <span onclick="rateStar(this)">&#9733;</span>
+            <div class="rating-confirm hidden">Thanks for rating! ⭐</div>
           </div>
         </div>
         <div class="mt-6">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLScRIA3QemqJBGST7KAbsJQyjVxJ1kfyb7XfVA2bZPuvgm-n7Q/viewform?usp=header" target="_blank" class="block text-center bg-yellow-500 hover:bg-yellow-400 text-black font-bold text-lg px-4 py-2 rounded-full transition">Register Now</a>
+          <button onclick="registerCourse(this, 'course3')" class="register-btn block w-full text-center bg-yellow-500 hover:bg-yellow-400 text-black font-bold text-lg px-4 py-2 rounded-full transition">Register Now</button>
         </div>
       </div>
     </div>
 
-    <!-- Common Questions -->
+    <!-- Course Outcomes Section -->
     <div class="mt-10 px-4 md:px-12">
-      <h2 class="text-2xl font-semibold text-center text-blue-300 mb-4"> Do You Know </h2>
-      <div class="bg-gray-900 p-4 rounded-xl text-gray-300 questions-box text-sm md:text-base leading-relaxed space-y-2">
-        <p>How do I connect frontend and backend while building my project?</p>
-        <p>What tools or platforms should I use to design an ATS-friendly resume?</p>
-        <p>How can I showcase my GitHub or LeetCode profiles effectively in my portfolio?</p>
-        <p>What are common mistakes to avoid in beginner-level dynamic web projects?</p>
-        <p>How do I use LinkedIn to actually get internships and grow my network?</p>
+      <h2 class="text-2xl font-semibold text-center text-blue-300 mb-4"> Course Outcomes </h2>
+      <div class="bg-gray-900 p-4 rounded-xl text-gray-300 text-sm md:text-base leading-relaxed space-y-3">
+        <p>✅ Build full working websites with backend integration</p>
+        <p>✅ Design a professional resume & portfolio to impress recruiters</p>
+        <p>✅ Master LinkedIn, GitHub, and LeetCode for professional presence</p>
+        <p>✅ Apply classroom learning in live projects and real-world tools</p>
+        <p>✅ Gain confidence for internships and tech job interviews</p>
       </div>
     </div>
   </div>
@@ -158,6 +173,7 @@
       const stars = btn.nextElementSibling;
       stars.classList.toggle('hidden');
     }
+
     function rateStar(star) {
       const siblings = star.parentNode.querySelectorAll('span');
       let clicked = false;
@@ -167,7 +183,31 @@
         if (!clicked) s.classList.add('active');
       });
       star.classList.add('active');
+
+      // Show confirmation
+      const confirmMsg = star.parentNode.querySelector('.rating-confirm');
+      if (confirmMsg) {
+        confirmMsg.classList.remove('hidden');
+        setTimeout(() => confirmMsg.classList.add('hidden'), 2500);
+      }
     }
+
+    function registerCourse(button, courseKey) {
+      localStorage.setItem(courseKey, 'registered');
+      button.outerHTML = '<div class="text-center text-green-400 font-bold">✅ You’ve already registered</div>';
+      window.open('https://docs.google.com/forms/d/e/1FAIpQLScRIA3QemqJBGST7KAbsJQyjVxJ1kfyb7XfVA2bZPuvgm-n7Q/viewform?usp=header', '_blank');
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      ['course1', 'course2', 'course3'].forEach(id => {
+        if (localStorage.getItem(id) === 'registered') {
+          const btn = document.querySelector(`button[onclick*="${id}"]`);
+          if (btn) {
+            btn.outerHTML = '<div class="text-center text-green-400 font-bold">✅ You’ve already registered</div>';
+          }
+        }
+      });
+    });
   </script>
 </body>
 </html>
