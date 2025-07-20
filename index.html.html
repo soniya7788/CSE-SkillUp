@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🔥 CSE SkillUp</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #111827;
+      color: #f3f4f6;
+    }
+    .course-card {
+      transition: transform 0.3s ease;
+    }
+    .course-card:hover {
+      transform: scale(1.03);
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: #93c5fd;
+    }
+    details {
+      background-color: #1f2937;
+      padding: 1rem;
+      border-radius: 0.5rem;
+    }
+    .rating-stars span {
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: gray;
+    }
+    .rating-stars span.active {
+      color: gold;
+    }
+    .questions-box p {
+      margin-bottom: 0.3rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="max-w-7xl mx-auto px-4 py-8">
+    <h1 class="text-4xl font-bold text-center mb-2">🔥 CSE SkillUp</h1>
+    <p class="text-center text-lg text-gray-300 mb-6">By CSE Gyaan Gurus</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Course 1 -->
+      <div class="bg-gray-800 p-4 rounded-xl shadow-lg course-card">
+        <img src="https://www.webfries.com/wp-content/uploads/2020/06/static-vs-dynamic-website.jpg" alt="Static to Dynamic" class="rounded-lg h-48 w-full object-cover mb-4">
+        <h2 class="text-xl font-semibold mb-1">From Static to Dynamic</h2>
+        <p class="text-sm text-gray-400 mb-2">Instructor: Team CSE</p>
+        <details>
+          <summary>Syllabus</summary>
+          <ul class="list-disc list-inside text-gray-300">
+            <li>What’s Beyond HTML/CSS?</li>
+            <li>Backend Basics</li>
+            <li>Databases Demystified</li>
+            <li>Tools Developers Use</li>
+            <li>Connecting Frontend to Backend</li>
+            <li>Form Handling, Data Storage, and Validation</li>
+            <li>Live Project</li>
+          </ul>
+        </details>
+        <div class="mt-4">
+          <button onclick="showRating(this)" class="bg-gray-700 text-white text-sm px-3 py-1 rounded-full">Rate this course</button>
+          <div class="rating-stars hidden mt-2 space-x-1">
+            <span onclick="rateStar(this)">&#9733;</span>
+            <span onclick="rateStar(this)">&#9733;</span>
+            <span onclick="rateStar(this)">&#9733;</span>
+            <span onclick="rateStar(this)">&#9733;</span>
+            <span onclick="rateStar(this)">&#9733;</span>
+          </div>
+        </div>
+        <div class="mt-6">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScRIA3QemqJBGST7KAbsJQyjVxJ1kfyb7XfVA2bZPuvgm-n7Q/viewform?usp=header" target="_blank" class="block text-center bg-yellow-500 hover:bg-yellow-400 text-black font-bold text-lg px-4 py-2 rounded-full transition">Register Now</a>
+        </div>
+      </div>
+
+      <!-- Course 2 -->
+      <div class="bg-gray-800 p-4 rounded-xl shadow-lg course-card">
+        <img src="https://staticlearn.shine.com/l/m/images/blog/mobile/cv_template.webp" alt="Resume & Portfolio" class="rounded-lg h-48 w-full object-cover mb-4">
+        <h2 class="text-xl font-semibold mb-1">Resume & Portfolio Building</h2>
+        <p class="text-sm text-gray-400 mb-2">Instructor: Team CSE</p>
+        <details>
+          <summary>Syllabus</summary>
+          <ul class="list-disc list-inside text-gray-300">
+            <li>What HRs Look For in Freshers' Resumes</li>
+            <li>The 6-Section Resume Formula</li>
+            <li>ATS-Friendly Design</li>
+            <li>Tools: Canva, Overleaf, Novoresume</li>
+            <li>Real Project Descriptions</li>
+            <li>Common Freshers' Mistakes</li>
+            <li>Digital Portfolio Website</li>
+          </ul>
+        </details>
+        <div class="mt-4">
+          <button onclick="showRating(this)" class="bg-gray-700 text-white text-sm px-3 py-1 rounded-full">Rate this course</button>
+          <div class="rating-stars hidden mt-2 space-x-1">
+            <span onclick="rateStar(this)">&#9733;</span>
+            <span onclick="rateStar(this)">&#9733;</span>
+            <span onclick="rateStar(this)">&#9733;</span>
+            <span onclick="rateStar(this)">&#9733;</span>
+            <span onclick="rateStar(this)">&#9733;</span>
+          </div>
+        </div>
+        <div class="mt-6">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScRIA3QemqJBGST7KAbsJQyjVxJ1kfyb7XfVA2bZPuvgm-n7Q/viewform?usp=header" target="_blank" class="block text-center bg-yellow-500 hover:bg-yellow-400 text-black font-bold text-lg px-4 py-2 rounded-full transition">Register Now</a>
+        </div>
+      </div>
+
+      <!-- Course 3 -->
+      <div class="bg-gray-800 p-4 rounded-xl shadow-lg course-card">
+        <img src="https://it.uic.edu/wp-content/uploads/sites/360/2021/01/LinkedIn-news.jpg" alt="Digital Social Life" class="rounded-lg h-48 w-full object-cover mb-4">
+        <h2 class="text-xl font-semibold mb-1">Build Your Digital Social Life</h2>
+        <p class="text-sm text-gray-400 mb-2">Instructor: Team CSE</p>
+        <details>
+          <summary>Syllabus</summary>
+          <ul class="list-disc list-inside text-gray-300">
+            <li>LinkedIn for Beginners: Profile, Bio, Internships</li>
+            <li>GitHub: Projects & Open-source</li>
+            <li>LeetCode: Practice, Ranking, Resume impact</li>
+          </ul>
+        </details>
+        <div class="mt-4">
+          <button onclick="showRating(this)" class="bg-gray-700 text-white text-sm px-3 py-1 rounded-full">Rate this course</button>
+          <div class="rating-stars hidden mt-2 space-x-1">
+            <span onclick="rateStar(this)">&#9733;</span>
+            <span onclick="rateStar(this)">&#9733;</span>
+            <span onclick="rateStar(this)">&#9733;</span>
+            <span onclick="rateStar(this)">&#9733;</span>
+            <span onclick="rateStar(this)">&#9733;</span>
+          </div>
+        </div>
+        <div class="mt-6">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScRIA3QemqJBGST7KAbsJQyjVxJ1kfyb7XfVA2bZPuvgm-n7Q/viewform?usp=header" target="_blank" class="block text-center bg-yellow-500 hover:bg-yellow-400 text-black font-bold text-lg px-4 py-2 rounded-full transition">Register Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Common Questions -->
+    <div class="mt-10 px-4 md:px-12">
+      <h2 class="text-2xl font-semibold text-center text-blue-300 mb-4">Do You Know</h2>
+      <div class="bg-gray-900 p-4 rounded-xl text-gray-300 questions-box text-sm md:text-base leading-relaxed space-y-2">
+        <p>How do I connect frontend and backend while building my project?</p>
+        <p>What tools or platforms should I use to design an ATS-friendly resume?</p>
+        <p>How can I showcase my GitHub or LeetCode profiles effectively in my portfolio?</p>
+        <p>What are common mistakes to avoid in beginner-level dynamic web projects?</p>
+        <p>How do I use LinkedIn to actually get internships and grow my network?</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showRating(btn) {
+      const stars = btn.nextElementSibling;
+      stars.classList.toggle('hidden');
+    }
+    function rateStar(star) {
+      const siblings = star.parentNode.querySelectorAll('span');
+      let clicked = false;
+      siblings.forEach(s => {
+        s.classList.remove('active');
+        if (s === star) clicked = true;
+        if (!clicked) s.classList.add('active');
+      });
+      star.classList.add('active');
+    }
+  </script>
+</body>
+</html>
